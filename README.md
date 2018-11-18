@@ -82,3 +82,7 @@ Tip: Pass options to Scala compiler
   You can pass options to scalac by defining a setting scalacOptions as shown below:
 
   scalacOptions ++= Seq("-feature", "-language:_", "-unchecked", "-deprecation","-encoding", "utf8")
+
+
+S-99: Ninety-Nine Scala Problems:
+http://aperiodic.net/phil/scala/s-99/
