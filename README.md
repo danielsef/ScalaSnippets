@@ -42,12 +42,13 @@ SBT
 Dependencies:
 
 Warning: the scala version shown in this screenshot is 2.10.3 and it's outdated. The scala version that we will use for this course is 2.11.x. Also, note that the scalatest dependency has the scala version embedded in "scalatest_2.10" and that there's no `2.0` version for 2.11.x. So, replace:
+```scala
   libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0" % "test"
-
+
 by:
   libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.6" % "test"
   libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
-
+```
 The double percentage symbol will force sbt to use the current scala version defined in scalaVersion (which has to be "2.11.7" or "2.11.8").
 
 
@@ -70,13 +71,13 @@ SBT: Rerun Tests
 
 Tip: Getting the right Scala version with %%
     As mentioned before Scala remain binary compatible only between minor versions. This results in various library versions for different scala versions. Few sections back, we used scalatest library. The dependency was defined as follows:
-'''
+```scala
     libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.6" % "test"
-'''
+```
 The scala version was specified in the artifactID "scalatest_2.11". This means every time we update the Scala version we would have to update the dependency. We can implicitly get the Scala version using the %% operator:
-'''
+```scala
     libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
-'''
+```
 
 
 Tip: Pass options to Scala compiler
