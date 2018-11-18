@@ -70,19 +70,20 @@ SBT: Rerun Tests
 
 Tip: Getting the right Scala version with %%
     As mentioned before Scala remain binary compatible only between minor versions. This results in various library versions for different scala versions. Few sections back, we used scalatest library. The dependency was defined as follows:
-
+'''
     libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.6" % "test"
-    The scala version was specified in the artifactID "scalatest_2.11". This means every time we update the Scala version we would have to update the dependency. We can implicitly get the Scala version using the %% operator:
-
+'''
+The scala version was specified in the artifactID "scalatest_2.11". This means every time we update the Scala version we would have to update the dependency. We can implicitly get the Scala version using the %% operator:
+'''
     libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
-
+'''
 
 
 Tip: Pass options to Scala compiler
   You can pass options to scalac by defining a setting scalacOptions as shown below:
-
+'''
   scalacOptions ++= Seq("-feature", "-language:_", "-unchecked", "-deprecation","-encoding", "utf8")
-
+'''
 
 S-99: Ninety-Nine Scala Problems:
 http://aperiodic.net/phil/scala/s-99/
