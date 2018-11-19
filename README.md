@@ -93,3 +93,7 @@ http://aperiodic.net/phil/scala/s-99/
 Scala Exercises:
 
 https://www.scala-exercises.org/scala_tutorial/definitions_and_evaluation
+
+
+
+http://allaboutscala.com/
